@@ -34,7 +34,14 @@ main {
   margin: 1rem auto;
   font-size: 1.5rem;
 }
-
+/* Center and resize your mod icon */
+.logo {
+  display: block;           /* so margin auto works */
+  margin: 0 auto 1rem auto; /* top/bottom 0, horizontal auto, small bottom margin */
+  width: 200px;             /* change this to make it bigger/smaller */
+  height: auto;             /* keep aspect ratio */
+  image-rendering: pixelated;
+}
 h1 {
   font-size: 3rem;
   margin-bottom: 1rem;
