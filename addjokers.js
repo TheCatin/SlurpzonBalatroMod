@@ -102,7 +102,7 @@ name: "Bubbly",
 text: [
 '{C:inactive}0/50 Discarded...{}'
 ],
-image_url: "img/jokers/Bubbly.png",
+image_url: "img/jokers/bubbly.png",
 rarity: "Common"
 },
 {
