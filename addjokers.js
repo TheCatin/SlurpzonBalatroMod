@@ -83,8 +83,7 @@ rarity: "Legendary"
 name: "Up Smash",
 text: [
 'Gain {X:red,C:white}0.5X{} Mult per {C:blue}Hand{} played',
-'Resets after round',
-'Currently {X:mult,C:white} X#1# {} Mult{}'
+'Resets after round'
 ],
 image_url: "img/jokers/upsmash.png",
 rarity: "Uncommon"
