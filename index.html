@@ -94,7 +94,7 @@
       References that you will probably understand.
     </p>
     <br>    <br>    <br>
-    <h2>DOWNLOAD IT</h2>
+<h2>BE THE <span id="dl-count">...</span> PERSON TO DOWNLOAD!</h2>
     <br>
     <a href="https://github.com/TheCatin/SlurpzonBalatroMod/releases/download/Beta/Slurpzon.zip" id="download">CLICK HERE!</a>
     <br>
@@ -167,6 +167,24 @@
   </main>
   <script src="addjokers.js" defer></script>
       <p style="color: white;">Thanks for visiting!</p>
-  
+  <script>
+  function ordinal(n) {
+    const s = ["TH","ST","ND","RD"];
+    const v = n % 100;
+    return n + (s[(v - 20) % 10] || s[v] || s[0]);
+  }
+
+  fetch("https://api.github.com/repos/TheCatin/SlurpzonBalatroMod/releases")
+    .then(r => r.json())
+    .then(releases => {
+      const total = releases.reduce((sum, release) =>
+        sum + release.assets.reduce((s, a) => s + a.download_count, 0), 0);
+      const next = total + 1;
+      document.getElementById("dl-count").textContent = ordinal(next);
+    })
+    .catch(() => {
+      document.getElementById("dl-count").textContent = "next";
+    });
+</script>
 </body>
 </html>
